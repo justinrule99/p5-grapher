@@ -38,9 +38,14 @@ export const calculateForRange = (start, end, equation) => {
         replaced = joined.split("x").join(inParen);
         let replacedFinal = replaced.split("y").join(inParenTimes);
         console.log(replacedFinal);
-        console.log(calculate(replacedFinal));
-        results.push(calculate(replacedFinal));
+        const y = calculate(replacedFinal);
+        console.log(y);
+        results.push({
+            x: i,
+            y: y
+        });
     }
 
+    // returns array of objects (x,y)
     return results;
 };
