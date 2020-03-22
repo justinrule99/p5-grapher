@@ -31,7 +31,7 @@ export const calculateForRange = (start, end, equation) => {
     // current form with 'x' and 'y'
     let joined = splitEqn.join('');
 
-    for (let i = start; i <= end; i+=.01) {
+    for (let i = start; i <= end; i+=.1) {
         inParen = "("+i.toFixed(3)+")";
         inParenTimes = "*("+i.toFixed(3)+")";
 
